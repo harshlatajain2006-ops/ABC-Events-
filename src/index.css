@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bg-main: #000000;
+  --color-bg-gradient: #052823;
+  --color-accent-primary: #00C4A0;
+  --color-accent-secondary: #008C78;
+  --color-accent-light: #41FFD2;
+  --color-card-bg: #141919;
+  --color-text-main: #FFFFFF;
+  --color-text-secondary: #A0AAAA;
+  --color-border-light: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-main text-text-main font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  .card-shadow-hover:hover {
+    box-shadow: 0 0 20px rgba(0, 196, 160, 0.2);
+  }
+  .glow-teal {
+    box-shadow: 0 0 15px rgba(0, 196, 160, 0.4);
+  }
+}
